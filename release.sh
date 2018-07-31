@@ -94,9 +94,12 @@ docker run -it -v $ssh_private_key:/root/.ssh/id_rsa \
            -v $ssh_public_key:/root/.ssh/id_rsa.pub \
            -v gpg-agent:/root/.gnupg \
            -e BUILD_TAG_MODE="release" \
+           -e BUILD_RELEASE="true" \
            -e BINTRAY_USER=$bintray_user \
            -e BINTRAY_KEY=$bintray_key \
+	   -e BINTRAY_DEPLOY=true \
            -e ENABLE_SIGNING=true \
+	   -v ~/.gradle/caches:/root/.gradle/caches \
            release_image:1.0
 
 # Remove docker pgp-agent:
