@@ -1,6 +1,10 @@
 FROM ubuntu:18.04 as intermediate
 
-RUN apt-get update && apt-get install -y git openjdk-8-jdk gpg && apt-get clean
+RUN apt-get update
+RUN apt-get install -y git
+RUN apt-get install -y openjdk-8-jdk
+RUN apt-get install -y gpg
+RUN apt-get clean
 
 ARG git_email
 ARG git_name
