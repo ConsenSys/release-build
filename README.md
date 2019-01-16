@@ -28,9 +28,9 @@ Add the resulting identity to your ssh agent trusted identities:
 
 > ssh-add -K &lt;private key&gt;
 
-### Follow the instructions at https://github.com/transifex/docker-gpg-agent-forward, reproduced here:
+### Follow the instructions at https://github.com/atoulme/docker-gpg-agent-forward, reproduced here:
 
-> git clone git://github.com/transifex/docker-gpg-agent-forward
+> git clone git://github.com/atoulme/docker-gpg-agent-forward
 > cd docker-gpg-agent-forward
 > make
 > make install
